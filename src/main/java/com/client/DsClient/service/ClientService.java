@@ -31,18 +31,14 @@ public class ClientService {
     @Transactional(readOnly = true)
     public ClientDTO findById(Long id){
         Optional<Client> obj = clientRepository.findById(id);
-        Client entity = obj.orElseThrow(() -> new ResourceNotFoundException("Entity not found"));
+        Client entity = obj.orElseThrow(() -> new ResourceNotFoundException("Entity not found or not exisit"));
         return new ClientDTO(entity);
     }
 
     @Transactional
-    public ClientDTO insertClient(ClientDTO dto){
+    public ClientDTO insertClient( ClientDTO dto){
         Client entity = new Client();
-        entity.setName(dto.getName());
-        entity.setBirthDate(dto.getBirthDate());
-        entity.setCpf(dto.getCpf());
-        entity.setIncome(dto.getIncome());
-        entity.setChildren(dto.getChildren());
+        inserUpdateClient(dto,entity);
         entity = clientRepository.save(entity);
 
         return new ClientDTO(entity);
@@ -52,11 +48,7 @@ public class ClientService {
     public ClientDTO updateClient(Long id,ClientDTO dto){
         try {
             Client entity = clientRepository.getById(id);
-            entity.setName(dto.getName());
-            entity.setBirthDate(dto.getBirthDate());
-            entity.setCpf(dto.getCpf());
-            entity.setIncome(dto.getIncome());
-            entity.setChildren(dto.getChildren());
+            inserUpdateClient(dto,entity);
             entity = clientRepository.save(entity);
 
             return new ClientDTO(entity);
@@ -77,6 +69,13 @@ public class ClientService {
         }
     }
 
+        public void inserUpdateClient(ClientDTO dto, Client entity){
+            entity.setName(dto.getName());
+            entity.setBirthDate(dto.getBirthDate());
+            entity.setCpf(dto.getCpf());
+            entity.setIncome(dto.getIncome());
+            entity.setChildren(dto.getChildren());
+        }
 
 
 
