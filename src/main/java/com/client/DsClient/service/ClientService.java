@@ -46,15 +46,13 @@ public class ClientService {
 
     @Transactional
     public ClientDTO updateClient(Long id,ClientDTO dto){
-        try {
-            Client entity = clientRepository.getById(id);
+        
+            
+            Client entity = clientRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Entity not found or not exisit -> "+id));
             inserUpdateClient(dto,entity);
             entity = clientRepository.save(entity);
 
             return new ClientDTO(entity);
-        }catch (EntityNotFoundException e){
-            throw new ResourceNotFoundException("Entity not found, ID: "+id);
-        }
     }
 
 

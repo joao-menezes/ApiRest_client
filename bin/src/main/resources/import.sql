@@ -1,0 +1,10 @@
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Maria','91570226075',57721,TIMESTAMP WITHOUT TIME ZONE '1997-07-13',2);
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Fabio','28205578052',260711,TIMESTAMP WITHOUT TIME ZONE '1998-03-10',1);
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Mateus','03405269040',453616,TIMESTAMP WITHOUT TIME ZONE '1992-05-06',2);
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Anderson','18234484028',495117,TIMESTAMP WITHOUT TIME ZONE '2003-04-05',3);
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Alana','78766945003',270538,TIMESTAMP WITHOUT TIME ZONE '2002-09-02',4);
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Mario','91527831035',181519,TIMESTAMP WITHOUT TIME ZONE '2001-10-13',2);
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Jorge','83800838060',124921,TIMESTAMP WITHOUT TIME ZONE '2000-01-19',1);
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Tim Main','48823741025',342931,TIMESTAMP WITHOUT TIME ZONE '2003-12-30',3);
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('James','42460294085',181995,TIMESTAMP WITHOUT TIME ZONE '1999-07-17',1);
+INSERT INTO tb_clients (name, cpf, income, birth_Date, children) VALUES ('Lucas','03620175063',336150,TIMESTAMP WITHOUT TIME ZONE '1991-08-15',2);

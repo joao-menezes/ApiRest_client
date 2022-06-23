@@ -2,7 +2,6 @@ package com.client.DsClient.dto;
 
 import com.client.DsClient.entities.Client;
 
-import javax.persistence.Column;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.Instant;
